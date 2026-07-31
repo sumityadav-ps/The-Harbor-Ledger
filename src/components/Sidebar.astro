@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import AdSlot from './AdSlot.astro';
 import { categoryLabel, formatDateShort } from '../data/site';
+import { withBase } from '../lib/paths';
 
 interface Props {
   latest: CollectionEntry<'articles'>[];
@@ -24,7 +25,7 @@ const { latest, popular = latest.slice(0, 5), showHalfpage = true } = Astro.prop
             <li>
               <span class="rank">{String(i + 1).padStart(2, '0')}</span>
               <div>
-                <a href={`${import.meta.env.BASE_URL}article/${item.id}`}>{item.data.title}</a>
+                <a href={withBase(`article/${item.id}`)}>{item.data.title}</a>
                 <p class="meta">{categoryLabel(item.data.category)}</p>
               </div>
             </li>
@@ -41,7 +42,7 @@ const { latest, popular = latest.slice(0, 5), showHalfpage = true } = Astro.prop
         {
           latest.slice(0, 6).map((item) => (
             <li>
-              <a href={`${import.meta.env.BASE_URL}article/${item.id}`}>{item.data.title}</a>
+              <a href={withBase(`article/${item.id}`)}>{item.data.title}</a>
               <p class="meta">{formatDateShort(item.data.pubDate)}</p>
             </li>
           ))

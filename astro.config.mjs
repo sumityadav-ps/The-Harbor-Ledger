@@ -1,12 +1,11 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-// Static site for GitHub Pages.
-// For project pages (username.github.io/repo), set base: '/repo-name'.
-// For user/org pages, leave base as '/'.
+// GitHub project Pages: https://sumityadav-ps.github.io/The-Harbor-Ledger/
+// Trailing slash on base so BASE_URL joins cleanly with paths like "about", "_astro/..."
 export default defineConfig({
-  site: 'https://example.github.io',
-  base: '/',
+  site: 'https://sumityadav-ps.github.io',
+  base: '/The-Harbor-Ledger/',
   output: 'static',
   trailingSlash: 'never',
   build: {

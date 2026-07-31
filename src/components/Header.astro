@@ -1,5 +1,6 @@
 ---
 import { site, categories } from '../data/site';
+import { withBase } from '../lib/paths';
 
 const today = new Date().toLocaleDateString('en-US', {
   weekday: 'long',
@@ -9,6 +10,7 @@ const today = new Date().toLocaleDateString('en-US', {
 });
 
 const path = Astro.url.pathname;
+const homeHref = withBase();
 ---
 
 <header class="site-header">
@@ -16,11 +18,11 @@ const path = Astro.url.pathname;
     <div class="header-top">
       <p class="header-top__date">{today}</p>
       <p class="header-top__place">{site.location} Edition · Est. {site.founded}</p>
-      <a class="header-top__link" href={`${import.meta.env.BASE_URL}about`}>About the Ledger</a>
+      <a class="header-top__link" href={withBase('about')}>About the Ledger</a>
     </div>
 
     <div class="masthead">
-      <a class="masthead__brand" href={import.meta.env.BASE_URL}>
+      <a class="masthead__brand" href={homeHref}>
         <span class="masthead__mark" aria-hidden="true"></span>
         <span class="masthead__name">{site.name}</span>
       </a>
@@ -30,13 +32,23 @@ const path = Astro.url.pathname;
     <nav class="primary-nav" aria-label="Primary">
       <ul>
         <li>
-          <a href={import.meta.env.BASE_URL} class:list={[{ 'is-active': path === '/' || path === import.meta.env.BASE_URL }]}>
+          <a
+            href={homeHref}
+            class:list={[
+              {
+                'is-active':
+                  path === '/' ||
+                  path === homeHref ||
+                  path === `${homeHref}/`,
+              },
+            ]}
+          >
             Home
           </a>
         </li>
         {
           categories.map((cat) => {
-            const href = `${import.meta.env.BASE_URL}category/${cat.slug}`;
+            const href = withBase(`category/${cat.slug}`);
             const active = path.includes(`/category/${cat.slug}`);
             return (
               <li>

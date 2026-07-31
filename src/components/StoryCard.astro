@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { categoryLabel, formatDateShort } from '../data/site';
+import { withBase } from '../lib/paths';
 
 interface Props {
   article: CollectionEntry<'articles'>;
@@ -10,7 +11,7 @@ interface Props {
 }
 
 const { article, size = 'md', showHero = false, showDek = true } = Astro.props;
-const href = `${import.meta.env.BASE_URL}article/${article.id}`;
+const href = withBase(`article/${article.id}`);
 const titleClass =
   size === 'feature'
     ? 'story-card--feature'
@@ -21,7 +22,7 @@ const titleClass =
         : '';
 
 const imageSrc = article.data.image
-  ? `${import.meta.env.BASE_URL}${article.data.image.replace(/^\//, '')}`
+  ? withBase(article.data.image.replace(/^\//, ''))
   : null;
 ---
 

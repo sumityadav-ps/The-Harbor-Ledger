@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import AdSlot from '../components/AdSlot.astro';
 import Sidebar from '../components/Sidebar.astro';
 import { site, categories } from '../data/site';
+import { withBase } from '../lib/paths';
 
 const all = (await getCollection('articles')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -41,7 +42,7 @@ const popular = [...all].sort((a, b) => b.data.readMinutes - a.data.readMinutes)
           {
             categories.map((c) => (
               <li>
-                <a href={`${import.meta.env.BASE_URL}category/${c.slug}`}>
+                <a href={withBase(`category/${c.slug}`)}>
                   <strong>{c.label}</strong>
                   <span>{c.blurb}</span>
                 </a>

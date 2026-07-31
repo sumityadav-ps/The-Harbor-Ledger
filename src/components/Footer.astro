@@ -1,5 +1,6 @@
 ---
 import { site, categories } from '../data/site';
+import { withBase } from '../lib/paths';
 ---
 
 <footer class="site-footer">
@@ -15,7 +16,7 @@ import { site, categories } from '../data/site';
           {
             categories.map((c) => (
               <li>
-                <a href={`${import.meta.env.BASE_URL}category/${c.slug}`}>{c.label}</a>
+                <a href={withBase(`category/${c.slug}`)}>{c.label}</a>
               </li>
             ))
           }
@@ -24,7 +25,7 @@ import { site, categories } from '../data/site';
       <div>
         <p class="footer-label">Newsroom</p>
         <ul class="footer-links">
-          <li><a href={`${import.meta.env.BASE_URL}about`}>About</a></li>
+          <li><a href={withBase('about')}>About</a></li>
           <li><a href={`mailto:${site.email}`}>Contact</a></li>
           <li><span>Port Meridian Bureau</span></li>
         </ul>
