@@ -1,0 +1,6 @@
+# The Harbor Ledger - crawl rules (demo publisher)
+User-agent: *
+Allow: /
+
+# Sitemap (GitHub project Pages path)
+Sitemap: https://sumityadav-ps.github.io/The-Harbor-Ledger/sitemap-index.xml

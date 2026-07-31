@@ -1,0 +1,26 @@
+# ads.txt for The Harbor Ledger (internal demo publisher)
+# Spec: https://iabtechlab.com/ads-txt/
+# NOTE: This is synthetic inventory for adtech testing - not a live seller.
+
+# Google Ad Manager / AdSense (placeholder publisher IDs)
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+google.com, pub-0000000000000000, RESELLER, f08c47fec0942fa0
+
+# OpenX
+openx.com, 540000000, RESELLER, 6a698e2ec38604c6
+
+# PubMatic
+pubmatic.com, 156000, RESELLER, 5d62403b186f2ace
+
+# AppNexus / Xandr
+appnexus.com, 0000, RESELLER, f5ab79cb980f11d1
+
+# Rubicon / Magnite
+rubiconproject.com, 00000, RESELLER, 0bfd66d529a55807
+
+# Index Exchange
+indexexchange.com, 000000, RESELLER, 50b1c356f2c5c8fc
+
+# OpenX / other common SSP pattern for demos
+# ownerdomain=sumityadav-ps.github.io
+# managerdomain=harborledger.example
