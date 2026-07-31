@@ -1,0 +1,154 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AdSlot from '../components/AdSlot.astro';
+import Sidebar from '../components/Sidebar.astro';
+import StoryCard from '../components/StoryCard.astro';
+import { categories, site } from '../data/site';
+
+const all = (await getCollection('articles')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+const featured = all.find((a) => a.data.featured) ?? all[0];
+const rest = all.filter((a) => a.id !== featured.id);
+const secondary = rest.slice(0, 2);
+const strip = rest.slice(2, 5);
+
+const byCategory = categories.map((cat) => ({
+  ...cat,
+  stories: rest.filter((a) => a.data.category === cat.slug).slice(0, 3),
+}));
+
+const popular = [...all].sort((a, b) => b.data.readMinutes - a.data.readMinutes).slice(0, 5);
+---
+
+<BaseLayout>
+  <div class="shell top-ad">
+    <AdSlot size="leaderboard" slotId="home-leaderboard-1" />
+  </div>
+
+  <div class="shell page-grid">
+    <main id="main" class="main">
+      <section class="lead">
+        <div class="lead__feature">
+          <StoryCard article={featured} size="feature" showHero={true} />
+        </div>
+        <div class="lead__side">
+          <ul class="story-list">
+            {
+              secondary.map((article) => (
+                <li>
+                  <StoryCard article={article} size="lg" showDek={true} />
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </section>
+
+      <hr class="rule rule--double" style="margin: 1.75rem 0 1.5rem" />
+
+      <section class="strip">
+        {
+          strip.map((article) => (
+            <StoryCard article={article} size="sm" showDek={false} />
+          ))
+        }
+      </section>
+
+      <div class="mid-ad">
+        <AdSlot size="leaderboard" slotId="home-leaderboard-2" />
+      </div>
+
+      {
+        byCategory
+          .filter((c) => c.stories.length > 0)
+          .map((section) => (
+            <section class="band">
+              <div class="band__head">
+                <h2 class="section-title">{section.label}</h2>
+                <a href={`${import.meta.env.BASE_URL}category/${section.slug}`}>
+                  All {section.label}
+                </a>
+              </div>
+              <div class="grid-3">
+                {section.stories.map((article) => (
+                  <StoryCard article={article} size="sm" showHero={true} showDek={true} />
+                ))}
+              </div>
+            </section>
+          ))
+      }
+
+      <section class="band about-band">
+        <div class="band__head">
+          <h2 class="section-title">From the newsroom</h2>
+        </div>
+        <p class="about-copy">
+          {site.name} is an independent digital newspaper covering {site.location} and the wider
+          coast. This build is a full static publisher surface - multi-section reporting, article
+          templates, and reserved advertising inventory - for internal placement and onboarding
+          work.
+        </p>
+      </section>
+    </main>
+
+    <Sidebar latest={all} popular={popular} />
+  </div>
+</BaseLayout>
+
+<style>
+  .top-ad {
+    padding-top: 1.15rem;
+  }
+
+  .lead {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 1.75rem;
+    align-items: start;
+  }
+
+  .lead__side {
+    padding-left: 1.5rem;
+    border-left: 1px solid var(--rule);
+  }
+
+  .strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .mid-ad {
+    margin: 2rem 0 0.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .about-copy {
+    margin: 0;
+    max-width: 62ch;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+  }
+
+  @media (max-width: 900px) {
+    .lead {
+      grid-template-columns: 1fr;
+    }
+
+    .lead__side {
+      padding-left: 0;
+      border-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 1.25rem;
+    }
+
+    .strip {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

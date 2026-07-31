@@ -1,0 +1,125 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AdSlot from '../components/AdSlot.astro';
+import Sidebar from '../components/Sidebar.astro';
+import { site, categories } from '../data/site';
+
+const all = (await getCollection('articles')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const popular = [...all].sort((a, b) => b.data.readMinutes - a.data.readMinutes).slice(0, 5);
+---
+
+<BaseLayout title="About" description={`About ${site.name}`}>
+  <div class="shell top-ad">
+    <AdSlot size="leaderboard" slotId="about-leaderboard" />
+  </div>
+
+  <div class="shell page-grid">
+    <main id="main" class="main about">
+      <p class="kicker">The Newsroom</p>
+      <h1 class="display about-title">About {site.name}</h1>
+      <p class="lede">
+        Founded in {site.founded} as a waterfront gazette, {site.name} covers business, civic life,
+        culture, and the wider coast from its bureau in {site.location}.
+      </p>
+
+      <div class="prose">
+        <p>
+          This website is a fully static digital edition built to look and behave like a working
+          publisher property: multi-section navigation, longform article pages, section archives,
+          and reserved advertising inventory at standard IAB sizes.
+        </p>
+        <p>
+          All stories on this site are original synthetic reporting written for demonstration and
+          internal testing - not real journalism about living people or active companies. The brand,
+          bylines, and institutions are invented.
+        </p>
+        <h2>Sections</h2>
+        <ul class="section-list">
+          {
+            categories.map((c) => (
+              <li>
+                <a href={`${import.meta.env.BASE_URL}category/${c.slug}`}>
+                  <strong>{c.label}</strong>
+                  <span>{c.blurb}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <h2>Advertising inventory</h2>
+        <p>
+          Pages include labeled placeholder slots (leaderboard 728×90, MPU 300×250, half-page
+          300×600, and in-article units) so placement, viewability, and layout work can be tested
+          without a live ad server. Each slot carries a <code>data-ad-slot</code> attribute for easy
+          targeting during integration.
+        </p>
+        <p>
+          Contact the newsroom at <a href={`mailto:${site.email}`}>{site.email}</a>.
+        </p>
+      </div>
+    </main>
+
+    <Sidebar latest={all} popular={popular} showHalfpage={false} />
+  </div>
+</BaseLayout>
+
+<style>
+  .top-ad {
+    padding-top: 1.15rem;
+  }
+
+  .about-title {
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    margin: 0.25rem 0 0.75rem;
+  }
+
+  .lede {
+    font-size: 1.2rem;
+    color: var(--ink-soft);
+    max-width: 40rem;
+    margin: 0 0 1.5rem;
+    line-height: 1.55;
+  }
+
+  .section-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .section-list a {
+    display: grid;
+    gap: 0.2rem;
+    text-decoration: none;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .section-list strong {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+  }
+
+  .section-list span {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  :global(.about .prose code) {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.88em;
+    background: var(--paper-deep);
+    padding: 0.1em 0.35em;
+  }
+
+  :global(.about .prose h2) {
+    font-family: var(--font-display);
+    font-size: 1.55rem;
+    margin: 1.75rem 0 0.75rem;
+  }
+</style>

@@ -1,0 +1,85 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { categoryLabel, formatDateShort } from '../data/site';
+
+interface Props {
+  article: CollectionEntry<'articles'>;
+  size?: 'feature' | 'lg' | 'md' | 'sm';
+  showHero?: boolean;
+  showDek?: boolean;
+}
+
+const { article, size = 'md', showHero = false, showDek = true } = Astro.props;
+const href = `${import.meta.env.BASE_URL}article/${article.id}`;
+const titleClass =
+  size === 'feature'
+    ? 'story-card--feature'
+    : size === 'lg'
+      ? 'story-card--lg'
+      : size === 'sm'
+        ? 'story-card--sm'
+        : '';
+
+const imageSrc = article.data.image
+  ? `${import.meta.env.BASE_URL}${article.data.image.replace(/^\//, '')}`
+  : null;
+---
+
+<article class:list={['story-card', titleClass]}>
+  {
+    showHero && (
+      <a class="story-card__media" href={href} aria-hidden="true" tabindex="-1">
+        {imageSrc ? (
+          <img
+            class="story-card__img"
+            src={imageSrc}
+            alt=""
+            width="960"
+            height="540"
+            loading="lazy"
+            decoding="async"
+          />
+        ) : (
+          <div class="hero-panel hero-panel--card" style={`--tone: ${article.data.heroTone}`} />
+        )}
+      </a>
+    )
+  }
+  <p class="kicker">{categoryLabel(article.data.category)}</p>
+  <h3 class="story-card__title">
+    <a href={href}>{article.data.title}</a>
+  </h3>
+  {showDek && <p class="story-card__dek">{article.data.dek}</p>}
+  <p class="meta">
+    By {article.data.author} · {formatDateShort(article.data.pubDate)} · {article.data.readMinutes} min read
+  </p>
+</article>
+
+<style>
+  .story-card__media {
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+    background: var(--paper-deep);
+    margin-bottom: 0.85rem;
+  }
+
+  .story-card__img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+  }
+
+  .story-card:hover .story-card__img {
+    transform: scale(1.03);
+  }
+
+  .story-card--feature .story-card__img {
+    aspect-ratio: 16 / 9;
+    max-height: 360px;
+  }
+</style>

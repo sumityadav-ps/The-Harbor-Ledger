@@ -1,0 +1,110 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import AdSlot from './AdSlot.astro';
+import { categoryLabel, formatDateShort } from '../data/site';
+
+interface Props {
+  latest: CollectionEntry<'articles'>[];
+  popular?: CollectionEntry<'articles'>[];
+  showHalfpage?: boolean;
+}
+
+const { latest, popular = latest.slice(0, 5), showHalfpage = true } = Astro.props;
+---
+
+<aside class="rail" aria-label="Sidebar">
+  <div class="ad-rail">
+    <AdSlot size="mpu" slotId="sidebar-mpu-1" />
+
+    <section class="widget">
+      <h2 class="widget__title">Most Read</h2>
+      <ol>
+        {
+          popular.slice(0, 5).map((item, i) => (
+            <li>
+              <span class="rank">{String(i + 1).padStart(2, '0')}</span>
+              <div>
+                <a href={`${import.meta.env.BASE_URL}article/${item.id}`}>{item.data.title}</a>
+                <p class="meta">{categoryLabel(item.data.category)}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    {showHalfpage && <AdSlot size="halfpage" slotId="sidebar-halfpage-1" />}
+
+    <section class="widget">
+      <h2 class="widget__title">Latest</h2>
+      <ul>
+        {
+          latest.slice(0, 6).map((item) => (
+            <li>
+              <a href={`${import.meta.env.BASE_URL}article/${item.id}`}>{item.data.title}</a>
+              <p class="meta">{formatDateShort(item.data.pubDate)}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <AdSlot size="mpu" slotId="sidebar-mpu-2" />
+  </div>
+</aside>
+
+<style>
+  .ad-rail {
+    gap: 1rem;
+  }
+
+  .widget {
+    padding: 0.85rem 0.9rem 0.95rem;
+  }
+
+  .widget__title {
+    margin-bottom: 0.65rem;
+    padding-bottom: 0.45rem;
+  }
+
+  .widget ol li,
+  .widget ul li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+    align-items: start;
+  }
+
+  .widget ul li {
+    grid-template-columns: 1fr;
+  }
+
+  .widget li + li {
+    margin-top: 0.55rem;
+    padding-top: 0.55rem;
+  }
+
+  .rank {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1;
+    min-width: 1.4rem;
+  }
+
+  .meta {
+    margin: 0.2rem 0 0;
+    font-size: 0.8rem;
+  }
+
+  .widget a {
+    font-size: 0.98rem;
+    line-height: 1.25;
+  }
+
+  :global(.ad-slot--mpu),
+  :global(.ad-slot--halfpage) {
+    max-width: 100%;
+  }
+</style>
