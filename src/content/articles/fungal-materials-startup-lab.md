@@ -4,7 +4,7 @@ dek: "Mycelium panels cured in a warehouse near the grain elevators could displa
 category: science
 author: "Felix Drummond"
 pubDate: 2026-03-01
-readMinutes: 9
+readMinutes: 2
 featured: false
 heroTone: "#1c3848"
 image: "/images/articles/fungal-materials-startup-lab.jpg"
@@ -25,7 +25,7 @@ Replication plans are already in motion with a partner lab inland. Independent c
 
 Field technicians emphasized that sensors fail in ordinary ways: bird strikes, battery sag, firmware quirks. The science depends as much on maintenance schedules as on elegant models.
 
-Scaling remains the villain. Humidity control and consistent density are harder in a real warehouse than in a glossy pitch deck.
+Humidity control and consistent density are harder in a real warehouse than in a glossy pitch deck.
 
 If performance holds, the first commercial customers are likely local e-commerce shippers who already pay for sustainability claims and want them to be true.
 

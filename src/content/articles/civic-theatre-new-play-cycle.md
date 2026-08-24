@@ -4,7 +4,7 @@ dek: "Rather than touring revivals, the company is commissioning writers who liv
 category: culture
 author: "Ivy Calder"
 pubDate: 2026-04-16
-readMinutes: 11
+readMinutes: 2
 featured: false
 heroTone: "#3d2a18"
 image: "/images/articles/civic-theatre-new-play-cycle.jpg"

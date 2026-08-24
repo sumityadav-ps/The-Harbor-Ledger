@@ -1,0 +1,111 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Sidebar from '../components/Sidebar.astro';
+import { site } from '../data/site';
+import { withBase } from '../lib/paths';
+
+const all = (await getCollection('articles')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const popular = [...all].sort((a, b) => b.data.readMinutes - a.data.readMinutes).slice(0, 5);
+const updated = 'August 24, 2026';
+---
+
+<BaseLayout title="Privacy Policy" description={`How ${site.name} handles visitor data.`}>
+  <div class="shell page-grid">
+    <main id="main" class="main about">
+      <p class="kicker">Legal</p>
+      <h1 class="display about-title">Privacy Policy</h1>
+      <p class="lede">Last updated {updated}.</p>
+
+      <div class="prose">
+        <p>
+          {site.name} is a static website. This policy describes exactly what happens when you
+          visit it, and it is kept deliberately short because very little happens.
+        </p>
+
+        <h2>What we collect</h2>
+        <p>
+          We do not operate analytics, we do not set cookies, and we do not ask you for personal
+          information. There are no accounts, newsletters, comment forms, or tracking pixels on
+          this site.
+        </p>
+
+        <h2>What our hosting provider sees</h2>
+        <p>
+          The site is served as static files by our hosting provider, which records standard server
+          request data - your IP address, the page requested, timestamp, and browser user agent -
+          for security and abuse prevention. We do not have access to these logs as an identifiable
+          per-visitor dataset, and we do not combine them with anything else.
+        </p>
+
+        <h2>Third parties</h2>
+        <p>
+          Web fonts are loaded from Google Fonts (<code>fonts.googleapis.com</code> and
+          <code>fonts.gstatic.com</code>). Requesting a font sends your IP address and user agent to
+          Google, governed by Google's own privacy policy. This is the only third-party request the
+          site makes.
+        </p>
+        <p>
+          The advertising units you see are placeholder creatives rendered directly in the page
+          markup. They are not supplied by an ad server, they are not personalised, and they set no
+          cookies. If we later enable real ad serving, this policy will be updated before that goes
+          live, and consent controls will be added where required.
+        </p>
+
+        <h2>Your rights</h2>
+        <p>
+          Under the GDPR, UK GDPR, and CCPA/CPRA you have rights of access, correction, deletion,
+          and objection over personal data a site holds about you. Because we hold no such data,
+          there is nothing for us to return or erase. If you believe otherwise, write to us and we
+          will investigate and respond.
+        </p>
+
+        <h2>Children</h2>
+        <p>
+          This site is not directed at children under 13 and collects no information from anyone.
+        </p>
+
+        <h2>Changes</h2>
+        <p>
+          Material changes will be reflected in the "last updated" date above.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Privacy questions go to <a href={`mailto:${site.email}`}>{site.email}</a>, or see our
+          <a href={withBase('contact')}>contact page</a>.
+        </p>
+      </div>
+    </main>
+
+    <Sidebar latest={all} popular={popular} showHalfpage={false} />
+  </div>
+</BaseLayout>
+
+<style>
+  .about-title {
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    margin: 0.25rem 0 0.75rem;
+  }
+
+  .lede {
+    font-size: 1.05rem;
+    color: var(--muted);
+    margin: 0 0 1.5rem;
+  }
+
+  :global(.about .prose code) {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.88em;
+    background: var(--paper-deep);
+    padding: 0.1em 0.35em;
+  }
+
+  :global(.about .prose h2) {
+    font-family: var(--font-display);
+    font-size: 1.55rem;
+    margin: 1.75rem 0 0.75rem;
+  }
+</style>

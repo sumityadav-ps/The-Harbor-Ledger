@@ -4,7 +4,7 @@ dek: "Custom lettering for restaurants and civic posters now has a walk-up windo
 category: culture
 author: "Noah Bergstrom"
 pubDate: 2026-03-22
-readMinutes: 8
+readMinutes: 2
 featured: false
 heroTone: "#2c1e2e"
 image: "/images/articles/type-foundry-opens-storefront.jpg"
@@ -24,8 +24,6 @@ Attendance on opening weekend exceeded staff projections, helped by clear weathe
 Accessibility upgrades made during the closure - ramps, captioning loops, quieter hours - are now part of the pitch, not a footnote. Several visitors said they returned because the building finally worked for them.
 
 > The first week brought restaurant owners seeking menus that do not look like printer templates and a city staffer quietly asking about wayfinding that feels less generic.
-
-The first week brought restaurant owners seeking menus that do not look like printer templates and a city staffer quietly asking about wayfinding that feels less generic.
 
 Workshops on lettering basics begin next month. Tools are provided; patience is not.
 

@@ -4,7 +4,7 @@ dek: "Large food businesses would be required to separate organics, with phased 
 category: politics
 author: "Daniel Okonkwo"
 pubDate: 2026-02-19
-readMinutes: 9
+readMinutes: 2
 featured: false
 heroTone: "#283040"
 image: "/images/articles/regional-compost-mandate.jpg"
@@ -25,7 +25,7 @@ Legal counsel reminded the body that findings of fact in the staff report will b
 
 The next hearing will tell whether the revised map is a genuine compromise or a device to run out the calendar. Housing advocates say they will measure acres and months, not adjectives.
 
-Environmental staff argue methane reduction and landfill life make the policy non-optional. “We are out of cheap holes in the ground,” said planner Iris Denton.
+“We are out of cheap holes in the ground,” said planner Iris Denton.
 
 A pilot in the basin already showed contamination rates drop when bilingual labels and a single hauler kit are provided.
 

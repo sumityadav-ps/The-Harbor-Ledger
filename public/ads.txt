@@ -1,26 +1,26 @@
-# ads.txt for The Harbor Ledger (internal demo publisher)
+# ads.txt for The Harbor Ledger
 # Spec: https://iabtechlab.com/ads-txt/
-# NOTE: This is synthetic inventory for adtech testing - not a live seller.
+#
+# No authorized sellers are declared yet. The lines below are a template:
+# uncomment and replace with the real publisher IDs your partner issues you.
+# Do not ship placeholder IDs - crawlers treat them as invalid records.
 
-# Google Ad Manager / AdSense (placeholder publisher IDs)
-google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
-google.com, pub-0000000000000000, RESELLER, f08c47fec0942fa0
+ownerdomain=theharborledger.com
+
+# Google Ad Manager / AdSense
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
 
 # OpenX
-openx.com, 540000000, RESELLER, 6a698e2ec38604c6
+# openx.com, XXXXXXXXX, RESELLER, 6a698e2ec38604c6
 
 # PubMatic
-pubmatic.com, 156000, RESELLER, 5d62403b186f2ace
+# pubmatic.com, XXXXXX, RESELLER, 5d62403b186f2ace
 
-# AppNexus / Xandr
-appnexus.com, 0000, RESELLER, f5ab79cb980f11d1
+# Xandr (AppNexus)
+# appnexus.com, XXXX, RESELLER, f5ab79cb980f11d1
 
-# Rubicon / Magnite
-rubiconproject.com, 00000, RESELLER, 0bfd66d529a55807
+# Magnite (Rubicon)
+# rubiconproject.com, XXXXX, RESELLER, 0bfd66d529a55807
 
 # Index Exchange
-indexexchange.com, 000000, RESELLER, 50b1c356f2c5c8fc
-
-# OpenX / other common SSP pattern for demos
-# ownerdomain=sumityadav-ps.github.io
-# managerdomain=harborledger.example
+# indexexchange.com, XXXXXX, RESELLER, 50b1c356f2c5c8fc

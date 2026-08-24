@@ -2,10 +2,9 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
-// GitHub project Pages: https://sumityadav-ps.github.io/The-Harbor-Ledger/
+// Custom domain: https://theharborledger.com
 export default defineConfig({
-  site: 'https://sumityadav-ps.github.io',
-  base: '/The-Harbor-Ledger/',
+  site: 'https://theharborledger.com',
   output: 'static',
   trailingSlash: 'never',
   build: {
@@ -13,7 +12,6 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      // Include project base in sitemap URLs
       filter: (page) => !page.includes('/404'),
     }),
   ],

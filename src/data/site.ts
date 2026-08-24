@@ -5,7 +5,7 @@ export const site = {
     'A daily digital newspaper covering business, technology, culture, and civic life - built as a realistic publisher environment for internal ad and layout testing.',
   location: 'Port Meridian',
   founded: 1894,
-  email: 'newsroom@harborledger.example',
+  email: 'newsroom@theharborledger.com',
 };
 
 export type CategorySlug =

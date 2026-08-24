@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import Sidebar from '../../components/Sidebar.astro';
 import StoryCard from '../../components/StoryCard.astro';
-import { categoryLabel, formatDate } from '../../data/site';
+import { site, categoryLabel, formatDate } from '../../data/site';
 import { withBase } from '../../lib/paths';
 
 export async function getStaticPaths() {
@@ -138,7 +138,7 @@ const afterHtml = blocks.slice(mid).map(blockToHtml).join('\n');
         <p class="endnote">
           Reporting for this story was prepared for The Harbor Ledger’s{' '}
           {categoryLabel(article.data.category).toLowerCase()} desk. Tips:
-          newsroom@harborledger.example
+          {site.email}
         </p>
       </article>
 

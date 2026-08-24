@@ -1,0 +1,120 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Sidebar from '../components/Sidebar.astro';
+import { site } from '../data/site';
+import { withBase } from '../lib/paths';
+
+const all = (await getCollection('articles')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const popular = [...all].sort((a, b) => b.data.readMinutes - a.data.readMinutes).slice(0, 5);
+
+const desks = [
+  {
+    label: 'Newsroom',
+    detail: 'Story tips, corrections, and questions about our reporting.',
+    email: site.email,
+  },
+  {
+    label: 'Advertising',
+    detail: 'Inventory, placements, and partnership enquiries.',
+    email: 'advertising@theharborledger.com',
+  },
+  {
+    label: 'Privacy',
+    detail: 'Data questions and requests under GDPR or CCPA.',
+    email: 'privacy@theharborledger.com',
+  },
+];
+---
+
+<BaseLayout title="Contact" description={`How to reach ${site.name}.`}>
+  <div class="shell page-grid">
+    <main id="main" class="main about">
+      <p class="kicker">The Newsroom</p>
+      <h1 class="display about-title">Contact us</h1>
+      <p class="lede">
+        {site.name} is produced by a small desk covering {site.location} and the wider coast. Email
+        is the fastest way to reach us.
+      </p>
+
+      <div class="prose">
+        <ul class="desk-list">
+          {
+            desks.map((d) => (
+              <li>
+                <strong>{d.label}</strong>
+                <span>{d.detail}</span>
+                <a href={`mailto:${d.email}`}>{d.email}</a>
+              </li>
+            ))
+          }
+        </ul>
+
+        <h2>Corrections</h2>
+        <p>
+          We correct errors of fact promptly and note the change on the article itself. Send the
+          headline, the passage in question, and what you believe is correct to
+          <a href={`mailto:${site.email}`}>{site.email}</a>.
+        </p>
+
+        <h2>About this publication</h2>
+        <p>
+          Every story on this site is synthetic - written for demonstration and layout testing, not
+          reporting about real people, companies, or events. Our
+          <a href={withBase('about')}>about page</a> explains how the site is built, and our
+          <a href={withBase('privacy')}>privacy policy</a> covers what we do and do not collect.
+        </p>
+      </div>
+    </main>
+
+    <Sidebar latest={all} popular={popular} showHalfpage={false} />
+  </div>
+</BaseLayout>
+
+<style>
+  .about-title {
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    margin: 0.25rem 0 0.75rem;
+  }
+
+  .lede {
+    font-size: 1.2rem;
+    color: var(--ink-soft);
+    max-width: 40rem;
+    margin: 0 0 1.5rem;
+    line-height: 1.55;
+  }
+
+  .desk-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .desk-list li {
+    display: grid;
+    gap: 0.2rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .desk-list strong {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+  }
+
+  .desk-list span {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  :global(.about .prose h2) {
+    font-family: var(--font-display);
+    font-size: 1.55rem;
+    margin: 1.75rem 0 0.75rem;
+  }
+</style>

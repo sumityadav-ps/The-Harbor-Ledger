@@ -4,7 +4,7 @@ dek: "Enrollment shifts and a new building force lines that parents treat as des
 category: politics
 author: "Camille Orth"
 pubDate: 2026-03-05
-readMinutes: 9
+readMinutes: 2
 featured: false
 heroTone: "#1e2030"
 image: "/images/articles/school-board-boundary-redraw.jpg"
@@ -25,7 +25,7 @@ Regional media coverage split along familiar lines. Morning radio framed the del
 
 Legal counsel reminded the body that findings of fact in the staff report will be read closely if litigation follows. That warning slowed the rhetoric more effectively than the gavel.
 
-Board members pledged that special programs would not be quietly concentrated by the new lines. Advocates asked for that pledge in a formal equity memo, not a meeting assurance.
+Advocates asked for that pledge in a formal equity memo, not a meeting assurance.
 
 A decision is expected by late spring to give families summer to adjust. Transportation routing will be modeled before the final vote, a lesson from the last redraw’s bus chaos.
 

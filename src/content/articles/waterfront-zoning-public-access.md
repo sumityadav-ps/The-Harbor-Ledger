@@ -4,7 +4,7 @@ dek: "Industrial uses remain protected, but the plan insists on view corridors a
 category: politics
 author: "Theo Rains"
 pubDate: 2026-04-11
-readMinutes: 11
+readMinutes: 2
 featured: false
 heroTone: "#242838"
 image: "/images/articles/waterfront-zoning-public-access.jpg"
@@ -25,7 +25,7 @@ Regional media coverage split along familiar lines. Morning radio framed the del
 
 Legal counsel reminded the body that findings of fact in the staff report will be read closely if litigation follows. That warning slowed the rhetoric more effectively than the gavel.
 
-Environmental groups want stronger shoreline habitat rules tied to any redevelopment. The draft adds buffers but stops short of a full habitat overlay some advocates sought.
+The draft adds buffers but stops short of a full habitat overlay some advocates sought.
 
 Public comment remains open for thirty days. Two open houses are scheduled - one daytime for shift workers, one evening for everyone else.
 

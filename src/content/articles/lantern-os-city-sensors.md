@@ -4,7 +4,7 @@ dek: "A quiet infrastructure firm beat larger bidders by promising open data exp
 category: technology
 author: "Camille Orth"
 pubDate: 2026-07-08
-readMinutes: 13
+readMinutes: 2
 featured: true
 heroTone: "#1a2744"
 image: "/images/articles/lantern-os-city-sensors.jpg"
@@ -25,7 +25,7 @@ Engineers involved in the rollout described the first ninety days as integration
 
 Security reviewers asked for independent penetration tests before any camera expansion. The city agreed to publish a redacted summary of findings, a compromise that satisfied neither the most open advocates nor the most cautious staff.
 
-Privacy advocates who tracked the RFP said they were cautiously optimistic. “The architecture matters more than the logo,” said civil liberties attorney Nessa Grier. Lantern’s proposal stores raw video locally for short retention and ships only derived metrics to the cloud by default.
+“The architecture matters more than the logo,” said civil liberties attorney Nessa Grier. Lantern’s proposal stores raw video locally for short retention and ships only derived metrics to the cloud by default.
 
 Implementation begins with the flood corridor, where gauges failed during last autumn’s surge. Traffic adaptive signals come in phase two. A public dashboard is scheduled within nine months of go-live.
 

@@ -4,7 +4,7 @@ dek: "What used to require a counter visit now appears as a live layer - messy, 
 category: technology
 author: "Noah Bergstrom"
 pubDate: 2026-02-26
-readMinutes: 9
+readMinutes: 2
 featured: false
 heroTone: "#1e2a38"
 image: "/images/articles/civic-map-layer-opens.jpg"
@@ -25,7 +25,7 @@ Engineers involved in the rollout described the first ninety days as integration
 
 Security reviewers asked for independent penetration tests before any camera expansion. The city agreed to publish a redacted summary of findings, a compromise that satisfied neither the most open advocates nor the most cautious staff.
 
-Community groups immediately found errors - a demolished garage still listed as active, a major renovation missing entirely. Staff say a feedback form is the intended fix path, not informal emails.
+Staff say a feedback form is the intended fix path, not informal emails.
 
 Developers are less enthusiastic about competitors seeing timelines, but the data was always public; it was only inconvenient. “Sunlight was always the policy,” said planning analyst Ruth Cho. “Now it has a basemap.”
 

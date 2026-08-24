@@ -4,7 +4,7 @@ dek: "After two years of structural repairs, the waterfront space returns with p
 category: culture
 author: "Camille Orth"
 pubDate: 2026-07-01
-readMinutes: 11
+readMinutes: 2
 featured: false
 heroTone: "#3a2430"
 image: "/images/articles/net-loft-gallery-reopens.jpg"
@@ -25,7 +25,7 @@ Accessibility upgrades made during the closure - ramps, captioning loops, quiete
 
 Funding remains a patchwork. A corporate underwriter covers lights and insurance; memberships cover programming risk. The board wants an endowment conversation before the next capital surprise.
 
-The building itself is part of the show. Exposed beams carry small brass plates noting which sections were replaced and which were saved. Visitors can walk a catwalk once used for drying gear.
+Exposed beams carry small brass plates noting which sections were replaced and which were saved. Visitors can walk a catwalk once used for drying gear.
 
 Opening night drew a mix of artists and longshore families. Several subjects of the portraits attended and corrected wall labels in pencil when details were off - a gesture staff left visible.
 

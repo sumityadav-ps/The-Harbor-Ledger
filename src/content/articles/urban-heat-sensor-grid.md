@@ -4,7 +4,7 @@ dek: "A summer grid of low-cost sensors shows temperature gaps that official sta
 category: science
 author: "Sasha Wren"
 pubDate: 2026-05-16
-readMinutes: 9
+readMinutes: 2
 featured: false
 heroTone: "#183040"
 image: "/images/articles/urban-heat-sensor-grid.jpg"
@@ -25,7 +25,7 @@ Public communication remains a deliberate practice. Figures are released with un
 
 Funders will decide the next phase on a mix of metrics and narrative. The team’s wager is that honest mixed results travel farther than glossy overclaim.
 
-Public works staff say the maps will influence tree-planting priority lists more than any single elegant master plan. “We plant where the dots are red,” said forester Maya Ruiz.
+“We plant where the dots are red,” said forester Maya Ruiz.
 
 Equity advocates note that rental buildings were harder to instrument because permission chains are longer. A second wave targets multifamily with landlord agreements.
 
