@@ -4,7 +4,7 @@ dek: "A proposed density overlay near transit drew six hours of testimony and no
 category: politics
 author: "Mara Ellison"
 pubDate: 2026-07-15
-readMinutes: 2
+readMinutes: 5
 featured: false
 heroTone: "#1c2438"
 image: "/images/articles/council-housing-vote-delayed.jpg"

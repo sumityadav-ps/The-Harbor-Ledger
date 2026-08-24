@@ -4,7 +4,7 @@ dek: "A simple timetable fix turns a day trip into a civilized evening without a
 category: travel
 author: "Theo Rains"
 pubDate: 2026-02-03
-readMinutes: 1
+readMinutes: 5
 featured: false
 heroTone: "#2c3830"
 image: "/images/articles/museum-night-ferry-package.jpg"
@@ -42,6 +42,10 @@ The ferry system has costed a relief rotation at approximately $71,000 for a twe
 There is also a quieter cost. The 10:15 sailing shifted the terminal's cleaning window, and the two contractors who service the Basin waiting hall now start at midnight rather than nine. Neither was consulted before the schedule change; both have since had their hours renegotiated.
 
 Local guides have built around the new slot rather than competing with it, packaging half-day island walks that finish before the dark ferry window — a practical design that has reduced stranded-visitor calls and the small emergencies that follow them.
+
+The four participating institutions split the bundle revenue by attendance rather than evenly, an arrangement that took most of a summer to negotiate. The maritime museum, which sits closest to the terminal, draws roughly twice the Museum Night traffic of the textile collection eleven minutes' walk inland. The textile collection's director, Beatriz Halloway, agreed to the formula but has asked for a review after the first full year.
+
+“Proximity to a dock is not an artistic merit,” Halloway said, dryly, at the consortium's December meeting. “I understand why the split is what it is. I would like the record to show that a walking-distance rule is a subsidy to whoever got the good building in 1954.” The consortium has since begun costing a shuttle loop, and found that a single minibus for four hours would erase most of the evening's margin.
 
 The consortium's next question is whether the model transfers. Two smaller institutions up the coast have asked about joining, but neither sits within walking distance of a terminal, and Brand is skeptical that a bundle survives the addition of a bus leg.
 

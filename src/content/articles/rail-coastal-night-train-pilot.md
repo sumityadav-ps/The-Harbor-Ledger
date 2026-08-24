@@ -4,7 +4,7 @@ dek: "A sleeper service between Port Meridian and the southern capital turns tra
 category: travel
 author: "Elena Vos"
 pubDate: 2026-06-12
-readMinutes: 2
+readMinutes: 5
 featured: false
 heroTone: "#3a3020"
 image: "/images/articles/rail-coastal-night-train-pilot.jpg"

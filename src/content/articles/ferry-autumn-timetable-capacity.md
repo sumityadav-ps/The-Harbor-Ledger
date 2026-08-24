@@ -1,10 +1,10 @@
 ---
-title: "The Ferry's Autumn Timetable Meets a Season That No Longer Thins"
+title: "The Ferry’s Autumn Timetable Meets a Season That No Longer Thins"
 dek: "Sailings drop from fourteen to eleven on September 8, but the vehicle deck stopped emptying after Labor Day three years ago."
 category: travel
 author: "Owen Kline"
 pubDate: 2026-07-24
-readMinutes: 5
+readMinutes: 6
 featured: false
 heroTone: "#163040"
 tags:
@@ -17,19 +17,19 @@ The Port Meridian Ferry System published its autumn timetable on Monday, and the
 
 That reduction is not new. Some version of it has happened every September since the route was consolidated in 2011, on the reasonable theory that once school starts, the island traffic falls away. What has changed is the traffic.
 
-Vehicle-deck reservations on the Cordage run between September 8 and October 31 have risen 31 percent over three years, according to booking data the ferry system released alongside the timetable. In 2023 the autumn window filled 61 percent of available vehicle slots. Last year it filled 84 percent. On eleven of last October's Fridays and Sundays, it filled all of them by Wednesday.
+Vehicle-deck reservations on the Cordage run between September 8 and October 31 have risen 31 percent over three years, according to booking data the ferry system released alongside the timetable. In 2023 the autumn window filled 61 percent of available vehicle slots. Last year it filled 84 percent. On eleven of last October’s Fridays and Sundays, it filled all of them by Wednesday.
 
-"We are running a shoulder-season schedule against something that is no longer a shoulder," said Hollis Vane, the system's director of service planning, in an interview at the terminal office above Berth 2. "I want to be precise about that. It is still not July. It is also not what September was."
+“We are running a shoulder-season schedule against something that is no longer a shoulder,” said Hollis Vane, the system’s director of service planning, in an interview at the terminal office above Berth 2. “I want to be precise about that. It is still not July. It is also not what September was.”
 
-Vane's office models the autumn schedule off a five-year rolling demand curve, a method that has the virtue of stability and the defect of lag. Because the curve averages the last five Septembers, a step change three years ago enters the model at one-fifth weight per year. By the time the curve fully absorbs the new pattern, Vane said, it will be 2028.
+Vane’s office models the autumn schedule off a five-year rolling demand curve, a method that has the virtue of stability and the defect of lag. Because the curve averages the last five Septembers, a step change three years ago enters the model at one-fifth weight per year. By the time the curve fully absorbs the new pattern, Vane said, it will be 2028.
 
 ## What is filling the boats
 
 The obvious culprits are the ones the region spent money creating. The three-island quiet campaign that launched last spring — the one that sold silence instead of scarcity — pushed average stays up and pushed bookings later. Innkeepers who once shut their kitchens two weekdays after August now report near-full houses into the second week of October.
 
-"We asked for this," said Maris Cole, who runs an eleven-room inn at South Haven and served on the campaign's advisory group. "I sat in a room and argued that the light in October is the best product we have. Then I spent last Columbus Day weekend driving guests to the standby lane at six in the morning because there was no deck space."
+“We asked for this,” said Maris Cole, who runs an eleven-room inn at South Haven and served on the campaign’s advisory group. “I sat in a room and argued that the light in October is the best product we have. Then I spent last Columbus Day weekend driving guests to the standby lane at six in the morning because there was no deck space.”
 
-Remote work does the rest. The system's own intercept survey, conducted over nine days last October with 1,180 respondents, found that 27 percent of autumn vehicle passengers were traveling for a stay of four nights or longer that included at least two working days — a category that barely registered in the 2019 version of the same survey.
+Remote work does the rest. The system’s own intercept survey, conducted over nine days last October with 1,180 respondents, found that 27 percent of autumn vehicle passengers were traveling for a stay of four nights or longer that included at least two working days — a category that barely registered in the 2019 version of the same survey.
 
 Cargo has grown too, though less dramatically. Island contractors book vehicle slots for autumn work that cannot be done in the summer because the inns are full and cannot be done in the winter because the channel is unkind. Building-permit filings on the outer islands cluster in October at nearly twice the annual monthly average.
 
@@ -41,11 +41,11 @@ The counter-argument does not come from accountants. It comes from the engine ro
 
 Marine engineers on the Cordage run have argued for two years that the autumn reduction is the only reason the winter schedule holds. The three sailings that disappear on September 8 free roughly nineteen hours a week of vessel time, and that time is what the maintenance department uses for the planned work that keeps boats out of emergency dry dock in January.
 
-"Everybody wants fourteen boats in October and nobody wants six in February," said Paul Okonkwo, chief engineer and a frequent witness at statehouse hearings on the ferry maintenance fund. "Those are the same conversation. If you spend the autumn window on service, you spend the winter on tows."
+“Everybody wants fourteen boats in October and nobody wants six in February,” said Paul Okonkwo, chief engineer and a frequent witness at statehouse hearings on the ferry maintenance fund. “Those are the same conversation. If you spend the autumn window on service, you spend the winter on tows.”
 
-Okonkwo's point is supported by the system's own cancellation record. In the winter of 2023-24, when a staffing shortage forced the autumn reduction to be delayed by five weeks, unplanned mechanical cancellations between December and March hit 41 — the worst figure in a decade. The following winter, with the reduction on schedule, the number was 12.
+Okonkwo’s point is supported by the system’s own cancellation record. In the winter of 2023-24, when a staffing shortage forced the autumn reduction to be delayed by five weeks, unplanned mechanical cancellations between December and March hit 41 — the worst figure in a decade. The following winter, with the reduction on schedule, the number was 12.
 
-There is also a crewing constraint that no amount of demand can dissolve. Each additional daily round trip on the Cordage run requires roughly 2.6 full-time equivalent licensed positions once relief and rest rules are applied. The system currently has four unfilled engineer billets and a hiring pipeline that Vane described as "thin and getting older."
+There is also a crewing constraint that no amount of demand can dissolve. Each additional daily round trip on the Cordage run requires roughly 2.6 full-time equivalent licensed positions once relief and rest rules are applied. The system currently has four unfilled engineer billets and a hiring pipeline that Vane described as “thin and getting older.”
 
 ## What the system is doing instead
 
@@ -55,7 +55,7 @@ First, the reservation window for autumn vehicle slots opens 45 days out rather 
 
 Third, and most consequential for anyone who does not own a car, the two midday sailings on Fridays and Sundays will hold 30 percent of vehicle capacity for walk-on-priority loading, releasing it only 90 minutes before departure. Island residents pushed for that provision at three public meetings; contractors opposed it at the same three.
 
-Cole thinks the walk-on hold is right and says so plainly, which puts her at odds with several of her own guests. "People will be annoyed," she said. "People being annoyed is not the same as people being stranded."
+Cole thinks the walk-on hold is right and says so plainly, which puts her at odds with several of her own guests. “People will be annoyed,” she said. “People being annoyed is not the same as people being stranded.”
 
 ## If you are planning a trip
 
@@ -65,4 +65,4 @@ And treat the last sailing as a real constraint rather than a suggestion. The 7:
 
 Vane keeps a laminated card of the autumn timetable in his jacket pocket and pulls it out when people ask him what to do. On Monday afternoon he handed it across the desk, then took it back and turned it over. On the reverse, in ballpoint, someone in the terminal office had written the standby counts for every Sunday of last October — eleven numbers, none of them under nineteen.
 
-"That is the schedule I actually plan against," he said, and put the card back in his pocket.
+“That is the schedule I actually plan against,” he said, and put the card back in his pocket.

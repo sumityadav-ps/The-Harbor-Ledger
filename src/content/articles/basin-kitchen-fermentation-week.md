@@ -4,7 +4,7 @@ dek: "Kimchi, miso, and local sourdough share menus with dockside pickles in a c
 category: culture
 author: "Daniel Okonkwo"
 pubDate: 2026-06-09
-readMinutes: 2
+readMinutes: 5
 featured: false
 heroTone: "#4a2a20"
 image: "/images/articles/basin-kitchen-fermentation-week.jpg"

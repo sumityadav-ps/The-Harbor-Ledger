@@ -4,7 +4,7 @@ dek: "Outdoor cinema is back - with better sound design for neighbors and a ban 
 category: culture
 author: "Lina Park"
 pubDate: 2026-02-08
-readMinutes: 2
+readMinutes: 4
 featured: false
 heroTone: "#402828"
 image: "/images/articles/film-collective-dockside-screenings.jpg"

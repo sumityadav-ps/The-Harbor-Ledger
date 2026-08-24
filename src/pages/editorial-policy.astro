@@ -1,0 +1,72 @@
+---
+import ProsePage from '../layouts/ProsePage.astro';
+import { site } from '../data/site';
+import { withBase } from '../lib/paths';
+const updated = 'August 24, 2026';
+---
+
+<ProsePage
+  title="Editorial Policy"
+  kicker="Standards"
+  description={`How ${site.name} reports, sources, labels, and corrects its work.`}
+  lede={`How we report, source, label, and correct our work. Last updated ${updated}.`}
+>
+  <h2>What this publication is</h2>
+  <p>
+    {site.name} is a demonstration newspaper. The city of Port Meridian is invented, and so is every
+    person, company, agency, team, and institution that appears in our pages. We publish this
+    material to build and test a realistic publishing environment — page layouts, section archives,
+    typography, and advertising placement — not to report on real events.
+  </p>
+  <p>
+    We state this plainly because a publication that looks like a newspaper carries an obligation to
+    say whether it is one. No article on this site should be cited, quoted, or relied upon as an
+    account of anything that actually happened.
+  </p>
+
+  <h2>Sourcing</h2>
+  <p>
+    Within the fiction, we hold ourselves to conventional standards: stories name their sources and
+    give their titles, figures are attributed to the document or official that produced them, and
+    anyone criticised is given room to answer. Where a story turns on a contested decision, we
+    present the strongest version of the opposing argument rather than a token line.
+  </p>
+
+  <h2>Independence</h2>
+  <p>
+    Advertisers have no influence over what we cover or how we cover it. Commercial staff do not see
+    stories before publication, and no advertiser is given advance notice of coverage that concerns
+    them. Sponsored material is labelled as such and is written separately from the newsroom.
+  </p>
+
+  <h2>Corrections</h2>
+  <p>
+    We correct errors of fact promptly and visibly. A correction is appended to the article itself
+    rather than made silently, and it says what was wrong and what the correct information is. If an
+    error is serious enough to change the meaning of a story, the correction goes at the top.
+  </p>
+  <p>
+    To report an error, write to <a href={`mailto:${site.email}`}>{site.email}</a> with the headline,
+    the passage in question, and what you believe is correct. Our
+    <a href={withBase('contact')}>contact page</a> lists the relevant desks.
+  </p>
+
+  <h2>Bylines and authorship</h2>
+  <p>
+    Every article carries a byline, and every byline has a page collecting that writer's work. Our
+    <a href={withBase('authors')}>contributors page</a> lists the full masthead.
+  </p>
+
+  <h2>Use of AI</h2>
+  <p>
+    The articles on this site are machine-generated fiction, produced to populate a realistic
+    publishing environment. They are not the work of human reporters, and the bylines are invented
+    personas rather than real journalists. We disclose this rather than leaving it to be inferred.
+  </p>
+
+  <h2>Reader privacy</h2>
+  <p>
+    We do not track readers. See our <a href={withBase('privacy')}>privacy policy</a> for what the
+    site does and does not collect.
+  </p>
+</ProsePage>

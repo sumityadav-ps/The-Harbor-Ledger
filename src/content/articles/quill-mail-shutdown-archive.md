@@ -4,7 +4,7 @@ dek: "When the boutique email platform set an end date, independent publishers d
 category: technology
 author: "Daniel Okonkwo"
 pubDate: 2026-06-15
-readMinutes: 2
+readMinutes: 5
 featured: false
 heroTone: "#0f2f3a"
 image: "/images/articles/quill-mail-shutdown-archive.jpg"

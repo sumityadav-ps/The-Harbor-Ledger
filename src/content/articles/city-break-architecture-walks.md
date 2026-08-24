@@ -4,7 +4,7 @@ dek: "A free booklet and audio trail link warehouses, civic buildings, and the q
 category: travel
 author: "Camille Orth"
 pubDate: 2026-04-18
-readMinutes: 1
+readMinutes: 4
 featured: false
 heroTone: "#3a2820"
 image: "/images/articles/city-break-architecture-walks.jpg"

@@ -4,7 +4,7 @@ dek: "Where storefront pharmacies closed, a van with a pharmacist and secure inv
 category: health
 author: "Elena Vos"
 pubDate: 2026-03-18
-readMinutes: 2
+readMinutes: 5
 featured: false
 heroTone: "#1c3034"
 image: "/images/articles/pharmacy-deserts-mobile-unit.jpg"

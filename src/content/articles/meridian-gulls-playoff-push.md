@@ -4,7 +4,7 @@ dek: "A surprising run has the club in a wild-card seat - and every bruise now f
 category: sports
 author: "Felix Drummond"
 pubDate: 2026-07-18
-readMinutes: 2
+readMinutes: 5
 featured: false
 heroTone: "#1e3a2f"
 image: "/images/articles/meridian-gulls-playoff-push.jpg"
@@ -44,6 +44,8 @@ Ticket demand has already forced a temporary release of upper-deck sections in t
 City transit planners are modeling playoff crowds now rather than in October. A home playoff match would require roughly $38,000 in overtime for extra late bus service on the 4, 11, and 22 routes, plus additional harbor-front stewarding. The transit authority has not committed. Its position, stated at a committee meeting last week, is that it will not pay overtime for a fixture that has not been scheduled.
 
 “Empty sidewalks after a loss cost a different kind of goodwill,” said transit planner Odile Sarraf, who has run the numbers three times. “But I cannot buy driver hours with goodwill. I need a date.”
+
+The club's own front office has a narrower version of the same problem. Any home playoff match must be confirmed to the league fourteen days out, and the stadium's temporary seating contractor requires ten days' notice. That leaves a four-day window in which the Gulls must commit to costs for a fixture they may not host. Commercial director Yusuf Almeida put the exposure at about $90,000. “We will spend it,” he said. “I would just prefer to spend it in a week when I know the answer.”
 
 The east stand's new tifo collective, which formed in January and has about ninety members, debuted a harbor-crane design last weekend that briefly stopped play while stewards cleared streamers from the corner flag. The referee's report noted a two-minute delay. The collective has apologized and announced that the next display will use fewer streamers and more fabric.
 

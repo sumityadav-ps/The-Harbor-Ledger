@@ -1,0 +1,98 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Sidebar from '../../components/Sidebar.astro';
+import StoryCard from '../../components/StoryCard.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { site, categoryLabel } from '../../data/site';
+import { withBase } from '../../lib/paths';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const all = await getCollection('articles');
+  const names = [...new Set(all.map((a) => a.data.author))];
+  return names.map((name) => {
+    const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    const items = all
+      .filter((a) => a.data.author === name)
+      .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+    return { params: { slug }, props: { name, items } };
+  });
+};
+
+const { name, items } = Astro.props;
+const all = (await getCollection('articles')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const beats = [...new Set(items.map((i) => i.data.category))].map(categoryLabel).sort();
+---
+
+<BaseLayout title={name} description={`Articles by ${name} for ${site.name}.`}>
+  <div class="shell page-grid">
+    <main id="main" class="main">
+      <p class="kicker">Contributor</p>
+      <h1 class="display author-name">{name}</h1>
+      <p class="author-meta">
+        {beats.join(' · ')} — {items.length} {items.length === 1 ? 'article' : 'articles'}
+      </p>
+      <p class="author-note">
+        An invented byline. See our <a href={withBase('editorial-policy')}>editorial policy</a>.
+      </p>
+
+      <div class="author-ad">
+        <AdSlot size="leaderboard" slotId="author-leaderboard" />
+      </div>
+
+      <div class="author-grid">
+        {items.map((a) => <StoryCard article={a} size="standard" showHero={true} />)}
+      </div>
+
+      <p class="back"><a href={withBase('authors')}>← All contributors</a></p>
+    </main>
+    <Sidebar latest={all} popular={all.slice(0, 5)} showHalfpage={false} />
+  </div>
+</BaseLayout>
+
+<style>
+  .author-name {
+    font-size: clamp(2.2rem, 4.5vw, 3rem);
+    margin: 0.25rem 0 0.4rem;
+  }
+
+  .author-meta {
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.5rem;
+  }
+
+  .author-note {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    margin: 0 0 1.5rem;
+  }
+
+  .author-ad {
+    margin-bottom: 1.75rem;
+  }
+
+  .author-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem 1.75rem;
+  }
+
+  .back {
+    margin-top: 2rem;
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+  }
+
+  @media (max-width: 720px) {
+    .author-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

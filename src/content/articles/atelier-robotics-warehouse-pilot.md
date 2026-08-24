@@ -4,7 +4,7 @@ dek: "The machines are not replacing crews, managers say - they are taking the l
 category: technology
 author: "Ivy Calder"
 pubDate: 2026-04-08
-readMinutes: 2
+readMinutes: 4
 featured: false
 heroTone: "#163040"
 image: "/images/articles/atelier-robotics-warehouse-pilot.jpg"

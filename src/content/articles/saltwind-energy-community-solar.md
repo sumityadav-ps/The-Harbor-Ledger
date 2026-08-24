@@ -4,7 +4,7 @@ dek: "A 28-megawatt project on reclaimed industrial land would sell shares to ho
 category: business
 author: "Priya Nandakumar"
 pubDate: 2026-04-22
-readMinutes: 2
+readMinutes: 4
 featured: false
 heroTone: "#2c3e50"
 image: "/images/articles/saltwind-energy-community-solar.jpg"

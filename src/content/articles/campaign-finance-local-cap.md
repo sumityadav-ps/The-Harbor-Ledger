@@ -4,7 +4,7 @@ dek: "Backers say city races are being nationalized by a few checks; critics say
 category: politics
 author: "Priya Nandakumar"
 pubDate: 2026-05-21
-readMinutes: 2
+readMinutes: 5
 featured: false
 heroTone: "#1a2838"
 image: "/images/articles/campaign-finance-local-cap.jpg"

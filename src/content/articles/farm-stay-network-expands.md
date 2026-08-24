@@ -4,7 +4,7 @@ dek: "Visitors can pick, pack, and learn - without unpaid labor confusion that p
 category: travel
 author: "Priya Nandakumar"
 pubDate: 2026-03-14
-readMinutes: 1
+readMinutes: 5
 featured: false
 heroTone: "#304030"
 image: "/images/articles/farm-stay-network-expands.jpg"

@@ -4,7 +4,7 @@ dek: "The race's reputation for brutal stairs and generous aid stations continue
 category: sports
 author: "Mara Ellison"
 pubDate: 2026-04-03
-readMinutes: 1
+readMinutes: 4
 featured: false
 heroTone: "#2a3520"
 image: "/images/articles/coastal-trail-ultramarathon.jpg"

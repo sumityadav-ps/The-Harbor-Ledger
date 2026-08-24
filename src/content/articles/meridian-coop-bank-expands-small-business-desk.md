@@ -4,7 +4,7 @@ dek: "After years of routing every loan through a generalist queue, the mutual l
 category: business
 author: "Jonah Pruitt"
 pubDate: 2026-06-28
-readMinutes: 2
+readMinutes: 5
 featured: false
 heroTone: "#2a4a3c"
 image: "/images/articles/meridian-coop-bank-expands-small-business-desk.jpg"

@@ -26,15 +26,21 @@ import { withBase } from '../lib/paths';
         <p class="footer-label">Newsroom</p>
         <ul class="footer-links">
           <li><a href={withBase('about')}>About</a></li>
+          <li><a href={withBase('authors')}>Contributors</a></li>
           <li><a href={withBase('contact')}>Contact</a></li>
+          <li><a href={withBase('editorial-policy')}>Editorial Policy</a></li>
+          <li><a href={withBase('advertise')}>Advertising</a></li>
           <li><a href={withBase('privacy')}>Privacy Policy</a></li>
-          <li><span>Port Meridian Bureau</span></li>
+          <li><a href={withBase('terms')}>Terms of Use</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© {new Date().getFullYear()} {site.name}. Internal demonstration publisher - synthetic content only.</p>
-      <p class="footer-note">Ad slots are placeholders for placement testing.</p>
+      <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
+      <p class="footer-note">
+        <a href={withBase('privacy')}>Privacy</a> · <a href={withBase('terms')}>Terms</a> ·
+        <a href={withBase('editorial-policy')}>Editorial Policy</a>
+      </p>
     </div>
   </div>
 </footer>

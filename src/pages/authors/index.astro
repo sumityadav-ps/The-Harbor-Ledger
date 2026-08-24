@@ -1,0 +1,84 @@
+---
+import { getCollection } from 'astro:content';
+import ProsePage from '../../layouts/ProsePage.astro';
+import { site, categoryLabel } from '../../data/site';
+import { withBase } from '../../lib/paths';
+
+export function authorSlug(name: string): string {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+const all = await getCollection('articles');
+const byAuthor = new Map<string, typeof all>();
+for (const a of all) {
+  const list = byAuthor.get(a.data.author) ?? [];
+  list.push(a);
+  byAuthor.set(a.data.author, list);
+}
+
+const authors = [...byAuthor.entries()]
+  .map(([name, items]) => {
+    const cats = [...new Set(items.map((i) => i.data.category))];
+    return {
+      name,
+      slug: authorSlug(name),
+      count: items.length,
+      beats: cats.map(categoryLabel).sort(),
+    };
+  })
+  .sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<ProsePage
+  title="Contributors"
+  kicker="Masthead"
+  description={`The writers of ${site.name}.`}
+  lede={`${authors.length} bylines currently writing for ${site.name}.`}
+>
+  <ul class="author-list">
+    {
+      authors.map((a) => (
+        <li>
+          <a href={withBase(`authors/${a.slug}`)}>
+            <strong>{a.name}</strong>
+            <span>
+              {a.beats.join(' · ')} — {a.count} {a.count === 1 ? 'article' : 'articles'}
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <p>
+    Every byline on this site is an invented persona, not a real journalist. Our
+    <a href={withBase('editorial-policy')}>editorial policy</a> explains how this publication works.
+  </p>
+</ProsePage>
+
+<style>
+  .author-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.75rem;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .author-list a {
+    display: grid;
+    gap: 0.2rem;
+    text-decoration: none;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .author-list strong {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+  }
+
+  .author-list span {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+</style>

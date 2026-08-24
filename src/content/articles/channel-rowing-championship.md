@@ -4,7 +4,7 @@ dek: "Elite eights will race a course that still shares water with freighters - 
 category: sports
 author: "Amina Solis"
 pubDate: 2026-06-21
-readMinutes: 2
+readMinutes: 4
 featured: false
 heroTone: "#2c4a1e"
 image: "/images/articles/channel-rowing-championship.jpg"

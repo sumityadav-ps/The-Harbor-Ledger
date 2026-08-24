@@ -4,7 +4,7 @@ dek: "Quieter operational windows may matter more than average daytime decibels,
 category: science
 author: "Ivy Calder"
 pubDate: 2026-04-07
-readMinutes: 2
+readMinutes: 5
 featured: false
 heroTone: "#243848"
 image: "/images/articles/marine-mammal-noise-study.jpg"

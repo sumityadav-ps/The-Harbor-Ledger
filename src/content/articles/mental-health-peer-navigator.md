@@ -4,7 +4,7 @@ dek: "People with lived experience of crisis care now meet some patients before 
 category: health
 author: "Priya Nandakumar"
 pubDate: 2026-05-09
-readMinutes: 2
+readMinutes: 5
 featured: false
 heroTone: "#1a3540"
 image: "/images/articles/mental-health-peer-navigator.jpg"

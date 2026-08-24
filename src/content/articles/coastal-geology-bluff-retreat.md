@@ -4,7 +4,7 @@ dek: "Homeowners want certainty; geologists offer ranges, scenarios, and a warni
 category: science
 author: "Amina Solis"
 pubDate: 2026-01-15
-readMinutes: 2
+readMinutes: 5
 featured: false
 heroTone: "#204050"
 image: "/images/articles/coastal-geology-bluff-retreat.jpg"

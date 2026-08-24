@@ -4,7 +4,7 @@ dek: "Fish counts improve; invasive plants remain stubborn; community science ke
 category: science
 author: "Lina Park"
 pubDate: 2026-07-10
-readMinutes: 2
+readMinutes: 5
 featured: false
 heroTone: "#1a3040"
 image: "/images/articles/estuary-restoration-year-three.jpg"

@@ -4,7 +4,7 @@ dek: "Ferries are calmer, inns discount, and the light turns the color photograp
 category: travel
 author: "Owen Kline"
 pubDate: 2026-07-04
-readMinutes: 2
+readMinutes: 5
 featured: false
 heroTone: "#2a3a28"
 image: "/images/articles/outer-islands-shoulder-season.jpg"

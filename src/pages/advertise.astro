@@ -1,0 +1,55 @@
+---
+import ProsePage from '../layouts/ProsePage.astro';
+import { site } from '../data/site';
+import { withBase } from '../lib/paths';
+---
+
+<ProsePage
+  title="Advertising"
+  kicker="Commercial"
+  description={`Advertising, sponsorship, and labelling standards at ${site.name}.`}
+  lede="What we sell, how it is labelled, and where the line sits between commercial and editorial."
+>
+  <h2>Inventory</h2>
+  <p>
+    Pages carry display advertising at standard IAB sizes: leaderboard (728×90), MPU (300×250),
+    half-page (300×600), billboard (970×250), and an in-article unit. Every slot is labelled and
+    carries a <code>data-ad-slot</code> attribute for integration and measurement.
+  </p>
+
+  <h2>Labelling</h2>
+  <p>
+    Display advertising is visually separated from editorial content and marked as advertising.
+    Sponsored articles, where they run, carry a label at the top of the page and in any listing where
+    they appear, and they name the sponsor. We do not run commercial material that is designed to be
+    mistaken for reporting.
+  </p>
+
+  <h2>Editorial independence</h2>
+  <p>
+    Buying advertising does not buy coverage, and it does not buy protection from coverage. Our
+    <a href={withBase('editorial-policy')}>editorial policy</a> sets out the separation in full.
+  </p>
+
+  <h2>What we do not accept</h2>
+  <p>
+    We decline advertising that is deceptive, that targets children, that promotes weapons or
+    surveillance products aimed at private individuals, or that cannot be clearly attributed to an
+    identifiable advertiser.
+  </p>
+
+  <h2>Reader data</h2>
+  <p>
+    The advertising units on this site are placeholder creatives rendered directly in the page. They
+    are not served by an ad server, they are not personalised, and they set no cookies. If that
+    changes, our <a href={withBase('privacy')}>privacy policy</a> will be updated before it goes
+    live and consent controls will be added where required.
+  </p>
+
+  <h2>Enquiries</h2>
+  <p>
+    Rates, availability, and partnerships:
+    <a href="mailto:advertising@theharborledger.com">advertising@theharborledger.com</a>. General
+    newsroom contact is <a href={`mailto:${site.email}`}>{site.email}</a>.
+  </p>
+</ProsePage>

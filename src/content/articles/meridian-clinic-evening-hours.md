@@ -4,7 +4,7 @@ dek: "Primary care appointments after work are scarce citywide; one clinic is te
 category: health
 author: "Amina Solis"
 pubDate: 2026-07-06
-readMinutes: 2
+readMinutes: 4
 featured: false
 heroTone: "#1e3a38"
 image: "/images/articles/meridian-clinic-evening-hours.jpg"

@@ -4,7 +4,7 @@ dek: "Faster notifications and clearer school guidance follow a smoky week that 
 category: health
 author: "Marcus Hale"
 pubDate: 2026-06-02
-readMinutes: 2
+readMinutes: 4
 featured: false
 heroTone: "#2a4040"
 image: "/images/articles/air-quality-alert-protocol.jpg"

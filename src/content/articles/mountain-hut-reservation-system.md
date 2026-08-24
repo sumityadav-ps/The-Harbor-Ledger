@@ -4,7 +4,7 @@ dek: "The alpine club’s paper lottery gives way to a portal - with a human sti
 category: travel
 author: "Jonah Pruitt"
 pubDate: 2026-05-05
-readMinutes: 1
+readMinutes: 5
 featured: false
 heroTone: "#284038"
 image: "/images/articles/mountain-hut-reservation-system.jpg"
@@ -38,6 +38,8 @@ Winter routes remain a separate matter. Booking a winter hut requires a skill ac
 The transport link is where itineraries still break. Most huts are reached from the coast by a ferry-to-bus sequence, and a missed connection turns a calm plan into a scramble. The club has begun publishing recommended buffer hours alongside each hut listing and has rewritten its refund rules so that a weather-caused ferry cancellation now triggers an automatic credit rather than an appeal.
 
 Local guides have adapted around the same constraint, packaging half-day walks that end before the last dark ferry slot. Two of the region's guiding outfits say the change has measurably reduced stranded-visitor calls to the volunteer rescue line — from 31 in the previous season to 12.
+
+The build itself was unglamorous. The club spent $84,000 with a two-person development shop in the basin, rejected a hosted booking product that would have cost less because it could not represent a bunk-night as anything other than a hotel room, and ran the portal in parallel with the paper lottery for one full season before switching. Two wardens tested it on the satellite terminals actually installed at the huts, where bandwidth is measured in kilobits and a page that loads in a second on the coast takes forty seconds at Kessel Pass. The result is a warden interface that is almost entirely text.
 
 The broader question the club has not answered is labor. If shoulder-season bookings keep climbing, the huts will need wardens in May and October, which means year-round employment rather than seasonal hires, and a payroll the membership fee does not currently cover.
 

@@ -4,7 +4,7 @@ dek: "Captains say volatile dock prices are pushing crews toward riskier trips; 
 category: business
 author: "Theo Rains"
 pubDate: 2026-03-11
-readMinutes: 2
+readMinutes: 5
 featured: false
 heroTone: "#243447"
 image: "/images/articles/fisheries-co-op-price-floor-talks.jpg"

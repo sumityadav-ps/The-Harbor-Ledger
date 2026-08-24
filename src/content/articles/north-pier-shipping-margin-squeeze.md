@@ -4,8 +4,8 @@ dek: "The regional freighter is dropping three coastal legs after a bruising qua
 category: business
 author: "Mara Ellison"
 pubDate: 2026-07-12
-readMinutes: 2
-featured: true
+readMinutes: 5
+featured: false
 heroTone: "#1c3a4a"
 image: "/images/articles/north-pier-shipping-margin-squeeze.jpg"
 tags:
