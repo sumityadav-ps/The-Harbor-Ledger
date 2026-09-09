@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { site } from '../data/site';
+import { headScripts, bodyStartScripts, bodyEndScripts } from '../data/adtech';
 import { withBase } from '../lib/paths';
 import '../styles/global.css';
 
@@ -34,11 +35,14 @@ const fullTitle = title ? `${title} · ${site.name}` : `${site.name} - ${site.ta
       rel="stylesheet"
     />
     <title>{fullTitle}</title>
+    {headScripts && <Fragment set:html={headScripts} />}
   </head>
   <body>
+    {bodyStartScripts && <Fragment set:html={bodyStartScripts} />}
     <a class="skip-link" href="#main">Skip to content</a>
     <Header />
     <slot />
     <Footer />
+    {bodyEndScripts && <Fragment set:html={bodyEndScripts} />}
   </body>
 </html>

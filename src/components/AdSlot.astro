@@ -3,12 +3,15 @@
  * Placeholder ad inventory. Renders a labelled dotted frame at the requested
  * IAB size. Size shells live in global.css (.ad-slot--*).
  */
+import { adUnits } from '../data/adtech';
+
 interface Props {
   size: 'leaderboard' | 'mpu' | 'halfpage' | 'billboard' | 'inarticle';
   slotId: string;
 }
 
 const { size, slotId } = Astro.props;
+const adTag = adUnits[slotId];
 
 const sizeLabel =
   size === 'leaderboard' || size === 'inarticle'
@@ -21,13 +24,21 @@ const sizeLabel =
 ---
 
 <aside
-  class:list={['ad-ph', `ad-slot--${size}`]}
+  class:list={['ad-ph', `ad-slot--${size}`, adTag && 'ad-ph--live']}
   data-ad-slot={slotId}
   data-ad-size={sizeLabel.replace(/\s|×/g, (c) => (c === '×' ? 'x' : ''))}
   aria-label="Advertisement"
 >
-  <span class="ad-ph__label">Advertisement</span>
-  <span class="ad-ph__size">{sizeLabel}</span>
+  {
+    adTag ? (
+      <Fragment set:html={adTag} />
+    ) : (
+      <>
+        <span class="ad-ph__label">Advertisement</span>
+        <span class="ad-ph__size">{sizeLabel}</span>
+      </>
+    )
+  }
 </aside>
 
 <style>
@@ -43,6 +54,13 @@ const sizeLabel =
     text-align: center;
     padding: 0.5rem;
     box-sizing: border-box;
+  }
+
+  /* Real creative present: strip the placeholder chrome, let the ad show. */
+  .ad-ph--live {
+    border: 0;
+    background: none;
+    padding: 0;
   }
 
   .ad-ph__label {
